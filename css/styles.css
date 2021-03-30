@@ -1,0 +1,81 @@
+:root {
+    --red: #dc413e;
+    --dk-gray: #c0c0c0;
+    --lt-gray: #e8e8e8;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sr-only {
+    position: absolute;
+    width: 0;
+    height: 0;
+    left: -1000px;
+}
+
+.inner-container {
+    padding: 1rem;
+}
+
+/* Typography */
+
+h2 {
+    color: var(--red);
+    text-transform: uppercase;
+    font-size: 3.75rem;
+    font-weight: 200 ;
+}
+
+p {
+    margin-bottom: 1.5rem;
+}
+
+/* Header Styles */
+
+header {
+    background-color: #000;
+}
+
+svg {
+    fill: #fff;
+}
+.nav-links {
+    display: flex;
+    flex-flow: wrap;
+}
+
+.nav-links a {
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 1.5rem 0.5rem;
+    display: block;
+}
+
+.nav-links a:hover,
+.nav-links a:active {
+    color: var(--red);
+}
+
+
+/* Form Styles */
+
+fieldset {
+    border: none;
+    padding: 0;
+}
+
+label {
+    font-size: 1.875rem;
+    text-transform: uppercase;
+    display: block;
+}
+
+input {
+    width: 100%;
+    border: 1px solid var(--dk-gray);
+    border-radius: 5px;
+    padding: 0.5rem;
+    box-shadow: 2px 2px 3px var(--lt-gray);
+}
