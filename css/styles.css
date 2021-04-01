@@ -12,19 +12,28 @@ body {
     width: 0;
     height: 0;
     left: -1000px;
+    top: auto;
+    overflow: hidden;
 }
 
 .inner-container {
     padding: 1rem;
+    max-width: 76.75rem;
+    margin: 0 auto;
 }
 
 /* Typography */
 
-h2 {
+h2,
+h3 {
     color: var(--red);
     text-transform: uppercase;
     font-size: 3.75rem;
     font-weight: 200 ;
+}
+
+h3 {
+    font-size: 2.8125rem;
 }
 
 p {
@@ -35,11 +44,19 @@ p {
 
 header {
     background-color: #000;
+    position: sticky;
+    top: -96px;
+}
+
+header .inner-container {
+    padding-bottom: 0;
 }
 
 svg {
     fill: #fff;
 }
+
+
 .nav-links {
     display: flex;
     flex-flow: wrap;
@@ -64,6 +81,7 @@ svg {
 fieldset {
     border: none;
     padding: 0;
+    margin-bottom: 2.5rem;
 }
 
 label {
@@ -72,10 +90,68 @@ label {
     display: block;
 }
 
-input {
+input,
+textarea {
     width: 100%;
     border: 1px solid var(--dk-gray);
     border-radius: 5px;
     padding: 0.5rem;
     box-shadow: 2px 2px 3px var(--lt-gray);
+}
+
+textarea {
+    resize: none;
+    min-height: 18.75rem;
+}
+
+input[type="checkbox"] {
+    width: 1rem;
+    height: 1rem;
+    margin: 0;
+}
+
+label[for="privacyPolicy"] {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+input[type="submit"] {
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    width: auto;
+    border: none;
+    background-color: #fff;
+    box-shadow: none;
+    font-weight: bold;
+    cursor: pointer;
+    transition: padding 1s ease;
+}
+
+input[type="submit"]:hover {
+    color: var(--red);
+    padding-left: 20px;
+}
+
+input:invalid,
+textarea:invalid {
+    box-shadow:0 0 5px tomato;
+    border-radius: 5px;
+}
+
+
+@media only screen and (min-width:1260px) {
+    fieldset {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    fieldset div {
+        flex: 0 1 49%;
+    }
+
+    fieldset h3 {
+        width: 100%;
+    }
 }
